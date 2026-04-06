@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoon's Digital Learning - Full Process</title>
+    <title>Yoon's Digital Learning - Unit 1 Full Version</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        .fade-in { animation: fadeIn 0.4s ease-out forwards; }
+        .fade-in { animation: fadeIn 0.5s ease-out forwards; }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
         ::-webkit-scrollbar { display: none; }
@@ -21,103 +21,244 @@
         }
     </style>
 </head>
-<body class="bg-slate-200 flex justify-center items-center min-h-screen p-4">
+<body class="bg-slate-200 flex justify-center items-center min-h-screen p-4 font-sans">
 
-    <div class="w-full max-w-md bg-slate-50 h-[800px] max-h-screen relative shadow-2xl overflow-hidden flex flex-col text-slate-800 font-sans rounded-3xl border-8 border-slate-800">
+    <div class="w-full max-w-md bg-slate-50 h-[850px] max-h-screen relative shadow-2xl overflow-hidden flex flex-col text-slate-800 border-8 border-slate-900 rounded-[2.5rem]">
         
-        <div class="bg-indigo-600 text-white px-5 py-4 shadow-md z-10">
+        <div class="bg-indigo-600 text-white px-5 py-4 shadow-md z-10 shrink-0">
             <div class="flex justify-between items-center mb-3">
-                <div class="font-bold text-lg">Unit 1. Birds' Eyes</div>
+                <div class="font-bold text-lg tracking-wide">Unit 1. Animals</div>
                 <div class="flex items-center space-x-2 text-sm bg-indigo-800 px-3 py-1 rounded-full">
-                    <i class="fa-solid fa-fire text-orange-400"></i>
-                    <span class="font-bold">5일째!</span>
+                    <i class="fa-solid fa-clock text-indigo-300"></i>
+                    <span class="font-bold">목표: 20분</span>
                 </div>
             </div>
             <div class="w-full bg-indigo-900 rounded-full h-2 mb-1">
-                <div id="progress-bar" class="bg-green-400 h-2 rounded-full transition-all duration-500" style="width: 12.5%"></div>
+                <div id="progress-bar" class="bg-green-400 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
             </div>
-            <div class="text-xs text-indigo-200 text-right" id="step-indicator">Step 1 / 8</div>
+            <div class="text-xs text-indigo-200 text-right font-medium" id="step-indicator">Step 1 / 12</div>
         </div>
 
-        <div class="flex-1 overflow-y-auto p-5 relative" id="main-content">
+        <div class="flex-1 overflow-y-auto p-5 relative bg-slate-50" id="main-content">
             
             <div id="step-1" class="step-container space-y-6">
-                <div class="flex space-x-3 items-start">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center border-2 border-indigo-400 shrink-0"><i class="fa-solid fa-robot text-indigo-500 text-2xl"></i></div>
-                    <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-200">
-                        <p class="font-bold text-indigo-600 mb-1">AI 튜터 조이</p>
-                        <p>안녕! 오늘의 미션은 <b>'새의 눈(Birds' Eyes)'</b>이야.<br>본격적으로 읽기 전에 한번 찍어볼까? 새는 왜 눈을 잘 못 움직일까?</p>
+                <div class="flex space-x-3 items-start mt-4">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center border-2 border-indigo-400 shrink-0 shadow-sm"><i class="fa-solid fa-robot text-indigo-500 text-3xl"></i></div>
+                    <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-200 leading-relaxed">
+                        <p class="font-bold text-indigo-600 mb-1 text-base">AI 튜터 조이</p>
+                        <p>안녕! 오늘의 전체 학습 시간은 <b>약 20분</b>이야.<br>동물(Animals)에 관한 두 가지 흥미로운 이야기, <b>'새의 눈'</b>과 <b>'사막의 배'</b>를 마스터해 보자! 준비됐지?</p>
                     </div>
                 </div>
-                <div class="space-y-3">
-                    <button onclick="nextStep(2)" class="w-full text-left p-4 rounded-xl border-2 border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 transition">A. 눈이 너무 작아서</button>
-                    <button onclick="nextStep(2)" class="w-full text-left p-4 rounded-xl border-2 border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 transition">B. 근육이 무거워서</button>
-                    <button onclick="nextStep(2)" class="w-full text-left p-4 rounded-xl border-2 border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 transition">C. 잘 모르겠어 🤔</button>
-                </div>
+                <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover rounded-2xl shadow-md" alt="Animals">
+                <button onclick="nextStep(2)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-slate-800 transition active:scale-95">학습 시작하기 <i class="fa-solid fa-play ml-2"></i></button>
             </div>
 
-            <div id="step-2" class="step-container hidden space-y-6">
-                <div class="flex justify-between items-center bg-slate-800 text-white p-4 rounded-xl">
-                    <div class="flex items-center space-x-3">
-                        <button class="w-10 h-10 bg-indigo-500 rounded-full flex justify-center items-center"><i class="fa-solid fa-play"></i></button>
-                        <div>
-                            <p class="text-xs text-slate-300">전체 듣기</p>
-                            <p class="font-bold">Birds' Eyes</p>
-                        </div>
+            <div id="step-2" class="step-container hidden space-y-5">
+                <h2 class="text-xl font-bold text-slate-800">1. 핵심 단어 마스터 🎯</h2>
+                <p class="text-sm text-slate-500 mb-4">본문에 나올 핵심 단어 6개를 먼저 귀로 듣고 눈으로 익혀봐요.</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                        <button class="text-indigo-500 mb-2 hover:scale-110 transition"><i class="fa-solid fa-volume-high"></i></button>
+                        <span class="font-bold text-lg">muscle</span>
+                        <span class="text-xs text-slate-500 mt-1">근육</span>
                     </div>
-                    <i class="fa-solid fa-headphones text-2xl text-slate-400"></i>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                        <button class="text-indigo-500 mb-2 hover:scale-110 transition"><i class="fa-solid fa-volume-high"></i></button>
+                        <span class="font-bold text-lg">heavy</span>
+                        <span class="text-xs text-slate-500 mt-1">무거운</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                        <button class="text-indigo-500 mb-2 hover:scale-110 transition"><i class="fa-solid fa-volume-high"></i></button>
+                        <span class="font-bold text-lg">without</span>
+                        <span class="text-xs text-slate-500 mt-1">~없이</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                        <button class="text-indigo-500 mb-2 hover:scale-110 transition"><i class="fa-solid fa-volume-high"></i></button>
+                        <span class="font-bold text-lg">desert</span>
+                        <span class="text-xs text-slate-500 mt-1">사막</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                        <button class="text-indigo-500 mb-2 hover:scale-110 transition"><i class="fa-solid fa-volume-high"></i></button>
+                        <span class="font-bold text-lg">hump</span>
+                        <span class="text-xs text-slate-500 mt-1">혹</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                        <button class="text-indigo-500 mb-2 hover:scale-110 transition"><i class="fa-solid fa-volume-high"></i></button>
+                        <span class="font-bold text-lg">carry</span>
+                        <span class="text-xs text-slate-500 mt-1">나르다</span>
+                    </div>
                 </div>
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-slate-500 text-sm leading-relaxed h-[300px] overflow-y-auto">
-                    <p class="mb-3">People can move their eyes. We can look left or right without moving our heads. But many birds can't move their eyes very much. They do not have a lot of muscles around their eyes.</p>
-                    <p class="mb-3">Why not? Muscles are heavy. Birds must be light to fly. A bird with a lot of muscles can't fly very well. So birds don't have many muscles.</p>
-                    <p>Owls do not have any eye muscles. They can't move their eyes at all. But owls can move their heads. In fact, they can turn their heads all the way around...</p>
-                </div>
-                <button onclick="nextStep(3)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold">다 들었어요 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                <button onclick="nextStep(3)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold mt-6">단어 확인 완료 <i class="fa-solid fa-arrow-right ml-2"></i></button>
             </div>
 
             <div id="step-3" class="step-container hidden space-y-6">
+                <div class="flex justify-between items-center bg-slate-800 text-white p-4 rounded-xl shadow-md">
+                    <div class="flex items-center space-x-3">
+                        <button class="w-12 h-12 bg-indigo-500 rounded-full flex justify-center items-center hover:bg-indigo-400 transition"><i class="fa-solid fa-play text-xl"></i></button>
+                        <div>
+                            <p class="text-xs text-indigo-200">Story 1. 듣고 읽기</p>
+                            <p class="font-bold text-lg">Birds' Eyes</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-headphones text-3xl text-slate-500"></i>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-slate-700 text-base leading-loose h-[400px] overflow-y-auto">
+                    <p class="mb-4">People can move their eyes. We can look left or right without moving our heads. But many birds can't move their eyes very much. They do not have a lot of muscles around their eyes.</p>
+                    <p class="mb-4">Why not? Muscles are heavy. Birds must be light to fly. A bird with a lot of muscles can't fly very well. So birds don't have many muscles.</p>
+                    <p class="mb-4">Owls do not have any eye muscles. They can't move their eyes at all. But owls can move their heads. In fact, they can turn their heads all the way around. They can look around easily without moving their eyes at all.</p>
+                    <p>Owls can't move their eyes, but their eyes are very good in other ways. Owls' eyes are really big. They can see small animals very far away. Owls can also see well in the dark.</p>
+                </div>
+                <button onclick="nextStep(4)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-lg">본문 학습 완료 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+
+            <div id="step-4" class="step-container hidden space-y-6">
+                <div class="flex space-x-3 items-start mb-2">
+                    <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center border border-indigo-400 shrink-0"><i class="fa-solid fa-robot text-indigo-500 text-lg"></i></div>
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-200">
+                        <p>핵심을 짚어볼까? 아래 두 문제를 풀어봐!</p>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="text-xs text-indigo-500 font-bold mb-2">Q1. 세부 내용 파악</div>
+                    <h3 class="text-base font-bold text-slate-800 mb-4">새들이 눈 주변에 근육을 많이 가질 수 없는 진짜 이유는 무엇인가요?</h3>
+                    <div class="space-y-2">
+                        <button onclick="checkFeedbackModal(false)" class="w-full text-left p-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-sm">A. 눈이 너무 작아서</button>
+                        <button onclick="checkFeedbackModal(true)" class="w-full text-left p-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-sm text-indigo-700 bg-indigo-50 border-indigo-300 relative">
+                            B. 근육은 무거워서 날기에 불리하니까
+                            <span class="absolute right-3 top-3 text-green-500 text-lg"><i class="fa-solid fa-check-circle"></i></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 mt-4">
+                    <div class="text-xs text-indigo-500 font-bold mb-2">Q2. 추론하기</div>
+                    <h3 class="text-base font-bold text-slate-800 mb-4">올빼미(Owls)가 눈을 움직이지 못해도 괜찮은 이유는?</h3>
+                    <div class="space-y-2">
+                        <button class="w-full text-left p-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-sm">A. 머리를 360도로 돌릴 수 있어서</button>
+                        <button class="w-full text-left p-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-sm">B. 어두운 곳에만 살기 때문에</button>
+                    </div>
+                </div>
+                <button onclick="nextStep(5)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold">다음 과제로 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+
+            <div id="step-5" class="step-container hidden space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 mb-2">✍️ Story 1. 정밀 듣기 훈련</h2>
+                
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-center">
+                    <button class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full text-xl mb-4 mx-auto flex items-center justify-center hover:bg-indigo-200"><i class="fa-solid fa-volume-high"></i></button>
+                    <div class="text-lg font-medium">
+                        Birds must be <input type="text" id="dict1" class="w-20 border-b-2 border-indigo-400 outline-none text-center font-bold text-indigo-600 bg-transparent" placeholder="l _ _ _ t" oninput="checkAllDictations()"> to fly.
+                    </div>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-center">
+                    <button class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full text-xl mb-4 mx-auto flex items-center justify-center hover:bg-indigo-200"><i class="fa-solid fa-volume-high"></i></button>
+                    <div class="text-lg font-medium">
+                        Owls can see well in the <input type="text" id="dict2" class="w-20 border-b-2 border-indigo-400 outline-none text-center font-bold text-indigo-600 bg-transparent" placeholder="d _ _ k" oninput="checkAllDictations()">.
+                    </div>
+                </div>
+
+                <button id="btn-dict" onclick="nextStep(6)" class="w-full bg-slate-300 text-slate-500 py-4 rounded-xl font-bold transition duration-300 pointer-events-none">빈칸을 모두 채워주세요</button>
+            </div>
+
+            <div id="step-6" class="step-container hidden space-y-6">
                 <div class="flex space-x-3 items-start mb-4">
                     <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center border-2 border-indigo-400 shrink-0"><i class="fa-solid fa-robot text-indigo-500 text-2xl"></i></div>
                     <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-200">
                         <p class="font-bold text-indigo-600 mb-1">AI 튜터 조이</p>
-                        <p>내용이 조금 잡히지? 이번엔 들으면서 <b>'새가 눈을 못 움직이는 결정적 이유'</b>를 찾아봐!</p>
+                        <p>의미를 생각하며 원어민의 억양을 따라 말해봐! AI가 발음을 분석해줄게.</p>
                     </div>
                 </div>
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-indigo-200 text-slate-800 text-base leading-relaxed h-[300px] overflow-y-auto relative">
-                    <div class="absolute top-2 right-2 bg-indigo-100 text-indigo-600 text-xs px-2 py-1 rounded font-bold animate-pulse">2차 듣기 진행 중...</div>
-                    <p class="mb-3">People can move their eyes. We can look left or right without moving our heads. But many birds can't move their eyes very much. They do not have a lot of muscles around their eyes.</p>
-                    <p class="mb-3 font-bold text-indigo-900">Why not? Muscles are heavy. Birds must be light to fly. A bird with a lot of muscles can't fly very well. So birds don't have many muscles.</p>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center mt-6">
+                    <button class="text-slate-400 mb-4 text-sm"><i class="fa-solid fa-volume-high mr-1"></i> 원어민 듣기</button>
+                    <p class="text-xl font-bold text-slate-800 mb-8">"Owls do not have any eye muscles."</p>
+                    
+                    <button id="record-btn1" onclick="simulateRecording('record-btn1', 'score1', 'btn-speak')" class="w-16 h-16 bg-red-500 text-white rounded-full text-2xl mx-auto flex items-center justify-center shadow-lg transition">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <div id="score1" class="hidden mt-4 text-green-600 font-bold text-lg animate-bounce">Excellent! 95점 🌟</div>
                 </div>
-                <button onclick="nextStep(4)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold">이유를 찾았어요! <i class="fa-solid fa-arrow-right ml-2"></i></button>
+
+                <button id="btn-speak" onclick="nextStep(7)" class="w-full bg-slate-300 text-slate-500 py-4 rounded-xl font-bold transition duration-300 hidden">두 번째 스토리로 이동 <i class="fa-solid fa-arrow-right ml-2"></i></button>
             </div>
 
-            <div id="step-4" class="step-container hidden space-y-6">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                    <div class="text-xs text-slate-500 font-bold mb-2">Q. 내용 추론하기</div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-6 leading-snug">새들이 눈 주변에 근육(muscles)을 많이 가질 수 없는 진짜 이유는?</h3>
-                    <div class="space-y-3">
-                        <button onclick="checkAnswer(1)" class="w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:bg-slate-50 font-medium">A. 눈이 너무 작아서</button>
-                        <button onclick="checkAnswer(2)" class="w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:bg-slate-50 font-medium text-indigo-700 bg-indigo-50 border-indigo-300 relative overflow-hidden">
-                            B. 근육은 무거워서 날기에 불리하니까
-                            <span class="absolute right-3 top-4 text-green-500 text-xl font-bold"><i class="fa-solid fa-check-circle"></i></span>
-                        </button>
-                        <button onclick="checkAnswer(3)" class="w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:bg-slate-50 font-medium">C. 머리를 돌릴 수 있어서</button>
+            <div id="step-7" class="step-container hidden space-y-6">
+                <div class="flex justify-between items-center bg-slate-800 text-white p-4 rounded-xl shadow-md">
+                    <div class="flex items-center space-x-3">
+                        <button class="w-12 h-12 bg-indigo-500 rounded-full flex justify-center items-center hover:bg-indigo-400"><i class="fa-solid fa-play text-xl"></i></button>
+                        <div>
+                            <p class="text-xs text-indigo-200">Story 2. 듣고 읽기</p>
+                            <p class="font-bold text-lg">The Ship of the Desert</p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-headphones text-3xl text-slate-500"></i>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-slate-700 text-base leading-loose h-[400px] overflow-y-auto">
+                    <p class="mb-4">Camels live in the desert, and there are many interesting facts about camels. Some of them have two humps on their back, but others have one hump on their back.</p>
+                    <p class="mb-4">The hump is full of fat. Camels don't have to eat very often. They can use the fat in their humps for energy. Then the hump becomes smaller.</p>
+                    <p class="mb-4">Ships carry things across water. Camels carry things across sand. People call camels "ships of the desert." Camels can carry a lot of heavy things. They can carry as much as 455 kilograms. Camels also can drink about 41 liters of water in ten minutes.</p>
+                    <p>Camels are popular in the Middle East. People use camel hair to make rugs, tents, and clothes. They even use camel dung to make fires for cooking. They also eat camels. People say camels taste like beef. Camels are useful in many different ways.</p>
+                </div>
+                <button onclick="nextStep(8)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-lg">본문 학습 완료 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+
+            <div id="step-8" class="step-container hidden space-y-6">
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 mt-4">
+                    <div class="text-xs text-indigo-500 font-bold mb-2">Q1. 세부 내용 파악</div>
+                    <h3 class="text-base font-bold text-slate-800 mb-4">낙타의 혹(hump) 안에는 무엇이 가득 들어있나요?</h3>
+                    <div class="space-y-2">
+                        <button class="w-full text-left p-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-sm">A. 물 (Water)</button>
+                        <button class="w-full text-left p-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-sm bg-indigo-50 border-indigo-300 font-bold text-indigo-700">B. 지방 (Fat) ✅</button>
                     </div>
                 </div>
-                <button onclick="nextStep(5)" class="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold">정답 확인 완료 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+                    <div class="text-xs text-indigo-500 font-bold mb-2">Q2. 추론하기</div>
+                    <h3 class="text-base font-bold text-slate-800 mb-4">사람들이 낙타를 "사막의 배(ships of the desert)"라고 부르는 이유는?</h3>
+                    <div class="space-y-2">
+                        <button class="w-full text-left p-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-sm">A. 배처럼 무거운 짐을 사막에서 실어 나르기 때문에</button>
+                        <button class="w-full text-left p-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-sm">B. 배처럼 생겼기 때문에</button>
+                    </div>
+                </div>
+                <button onclick="nextStep(9)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold">다음 과제로 <i class="fa-solid fa-arrow-right ml-2"></i></button>
             </div>
 
-            <div id="step-5" class="step-container hidden space-y-6">
-                 <div class="flex space-x-3 items-start">
+            <div id="step-9" class="step-container hidden space-y-6">
+                <h2 class="text-xl font-bold text-slate-800 mb-2">✍️ Story 2. 정밀 듣기 훈련</h2>
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-center mt-4">
+                    <button class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full text-xl mb-4 mx-auto flex items-center justify-center hover:bg-indigo-200"><i class="fa-solid fa-volume-high"></i></button>
+                    <div class="text-lg font-medium leading-relaxed">
+                        They can use the fat in their humps for <br>
+                        <input type="text" id="dict3" class="w-24 border-b-2 border-indigo-400 outline-none text-center font-bold text-indigo-600 bg-transparent mt-2" placeholder="e _ _ _ g y" oninput="checkDict3()">.
+                    </div>
+                </div>
+                <button id="btn-dict2" onclick="nextStep(10)" class="w-full bg-slate-300 text-slate-500 py-4 rounded-xl font-bold transition duration-300 pointer-events-none">빈칸을 모두 채워주세요</button>
+            </div>
+
+            <div id="step-10" class="step-container hidden space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center mt-8">
+                    <button class="text-slate-400 mb-4 text-sm"><i class="fa-solid fa-volume-high mr-1"></i> 원어민 듣기</button>
+                    <p class="text-xl font-bold text-slate-800 mb-8">"People call camels ships of the desert."</p>
+                    
+                    <button id="record-btn2" onclick="simulateRecording('record-btn2', 'score2', 'btn-speak2')" class="w-16 h-16 bg-red-500 text-white rounded-full text-2xl mx-auto flex items-center justify-center shadow-lg transition">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <div id="score2" class="hidden mt-4 text-green-600 font-bold text-lg animate-bounce">Great! 88점 ⭐️</div>
+                </div>
+                <button id="btn-speak2" onclick="nextStep(11)" class="w-full bg-slate-300 text-slate-500 py-4 rounded-xl font-bold transition duration-300 hidden">마지막 문법 정리 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+            </div>
+
+            <div id="step-11" class="step-container hidden space-y-6">
+                 <div class="flex space-x-3 items-start mb-6">
                     <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center border-2 border-indigo-400 shrink-0"><i class="fa-solid fa-robot text-indigo-500 text-2xl"></i></div>
                     <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-200">
                         <p class="font-bold text-indigo-600 mb-1">AI 튜터 조이</p>
-                        <p>정답이야! 그럼 가장 중요한 문장을 살펴볼까? <span class="text-blue-500 font-bold border-b-2 border-blue-200">색칠된 단어</span>를 눌러서 힌트를 확인해봐!</p>
+                        <p>수고했어! 마지막으로 내신 시험에 자주 나오는 오늘 본문의 핵심 문법 패턴을 점검해 보자. <span class="text-blue-500 font-bold border-b-2 border-blue-200">색칠된 구문</span>을 터치해봐.</p>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-xl leading-relaxed text-center mt-4 py-12">
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-lg leading-relaxed text-center mb-4">
                     Birds 
-                    <span class="relative cursor-pointer text-blue-600 font-bold border-b-2 border-blue-400 inline-block mx-1" onclick="toggleTooltip('tip-must')">
+                    <span class="relative cursor-pointer text-blue-600 font-bold border-b-2 border-blue-400 mx-1" onclick="toggleTooltip('tip-must')">
                         must be
                         <span id="tip-must" class="hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-xs p-3 rounded-lg w-40 shadow-xl z-50">
                             💡 <b>[조동사]</b><br>틀림없이 ~해야 한다
@@ -125,74 +266,56 @@
                         </span>
                     </span> 
                     light 
-                    <span class="relative cursor-pointer text-green-600 font-bold border-b-2 border-green-400 inline-block mx-1" onclick="toggleTooltip('tip-to')">
+                    <span class="relative cursor-pointer text-green-600 font-bold border-b-2 border-green-400 mx-1" onclick="toggleTooltip('tip-to')">
                         to fly
-                        <span id="tip-to" class="hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-xs p-3 rounded-lg w-40 shadow-xl z-50">
-                            🎯 <b>[to부정사]</b><br>~하기 위해서 (목적)
+                        <span id="tip-to" class="hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-xs p-3 rounded-lg w-48 shadow-xl z-50">
+                            🎯 <b>[to부정사의 부사적 용법]</b><br>날기 위해서 (목적)
                             <div class="absolute w-2 h-2 bg-slate-800 transform rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
                         </span>
                     </span>.
                 </div>
-                <button onclick="nextStep(6)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold">구조 확인 완료 <i class="fa-solid fa-arrow-right ml-2"></i></button>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-lg leading-relaxed text-center">
+                    Camels 
+                    <span class="relative cursor-pointer text-orange-500 font-bold border-b-2 border-orange-300 mx-1" onclick="toggleTooltip('tip-dont')">
+                        don't have to
+                        <span id="tip-dont" class="hidden absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-xs p-3 rounded-lg w-48 shadow-xl z-50">
+                            🔥 <b>[조동사 부정]</b><br>~할 필요가 없다 (= don't need to)
+                            <div class="absolute w-2 h-2 bg-slate-800 transform rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
+                        </span>
+                    </span> 
+                    eat very often.
+                </div>
+
+                <button onclick="nextStep(12)" class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold mt-8 shadow-lg">최종 결과 보기 <i class="fa-solid fa-flag-checkered ml-2"></i></button>
             </div>
 
-            <div id="step-6" class="step-container hidden space-y-6">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center">
-                    <button class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full text-2xl mb-6 mx-auto flex items-center justify-center hover:bg-indigo-200"><i class="fa-solid fa-volume-high"></i></button>
-                    <p class="text-sm text-slate-500 mb-4">빈칸에 들어갈 단어를 적어주세요.</p>
-                    <div class="text-xl font-medium flex justify-center items-center space-x-2">
-                        <span>Birds must be</span>
-                        <input type="text" id="dict-input" class="w-24 border-b-2 border-indigo-400 outline-none text-center font-bold text-indigo-600 bg-transparent" placeholder="l _ _ _ t" oninput="checkDictation()">
-                        <span>to fly.</span>
-                    </div>
-                </div>
-                <button id="btn-step6" onclick="nextStep(7)" class="w-full bg-slate-300 text-slate-500 py-4 rounded-xl font-bold transition duration-300" disabled>정확히 입력해주세요</button>
-            </div>
-
-            <div id="step-7" class="step-container hidden space-y-6">
-                <div class="flex space-x-3 items-start mb-4">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center border-2 border-indigo-400 shrink-0"><i class="fa-solid fa-robot text-indigo-500 text-2xl"></i></div>
-                    <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-200">
-                        <p class="font-bold text-indigo-600 mb-1">AI 튜터 조이</p>
-                        <p>마지막이야! 의미를 생각하며 방금 배운 핵심 문장을 소리내어 읽어보자.</p>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-center">
-                    <p class="text-2xl font-bold text-slate-800 mb-8">"Birds must be light to fly."</p>
-                    
-                    <button id="record-btn" onclick="simulateRecording()" class="w-20 h-20 bg-red-500 text-white rounded-full text-3xl mx-auto flex items-center justify-center shadow-lg transition transform hover:scale-105">
-                        <i class="fa-solid fa-microphone"></i>
-                    </button>
-                    <p id="record-text" class="text-slate-500 text-sm mt-4">마이크 버튼을 눌러 녹음하세요</p>
-                    
-                    <div id="score-display" class="hidden mt-6 bg-green-50 text-green-700 p-4 rounded-xl font-bold text-xl border border-green-200">
-                        Excellent! (92점) 🌟
-                    </div>
-                </div>
-                <button id="btn-step7" onclick="nextStep(8)" class="w-full bg-slate-300 text-slate-500 py-4 rounded-xl font-bold hidden">결과 보기 <i class="fa-solid fa-arrow-right ml-2"></i></button>
-            </div>
-
-            <div id="step-8" class="step-container hidden flex-col items-center justify-center pt-8 space-y-6">
+            <div id="step-12" class="step-container hidden flex-col items-center pt-6 space-y-5">
                 <div class="text-6xl animate-bounce">🏆</div>
-                <h2 class="text-2xl font-bold text-slate-800">Unit 1 미션 완벽 클리어!</h2>
+                <h2 class="text-2xl font-bold text-slate-800">20분 완벽 몰입 달성!</h2>
                 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-yellow-200 w-full relative overflow-hidden text-center">
-                    <div class="text-yellow-500 text-4xl mb-3"><i class="fa-solid fa-medal"></i></div>
-                    <p class="font-bold text-lg mb-1">새로운 뱃지 획득!</p>
-                    <p class="text-sm text-slate-500">[가벼운 깃털]</p>
+                <div class="w-full grid grid-cols-2 gap-3 mt-4">
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-yellow-200 text-center">
+                        <div class="text-yellow-500 text-3xl mb-1"><i class="fa-solid fa-medal"></i></div>
+                        <p class="font-bold text-sm">새의 눈 뱃지</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-yellow-200 text-center">
+                        <div class="text-orange-400 text-3xl mb-1"><i class="fa-solid fa-medal"></i></div>
+                        <p class="font-bold text-sm">사막의 배 뱃지</p>
+                    </div>
                 </div>
 
-                <div class="w-full bg-white p-5 rounded-xl border border-slate-200 text-left">
-                    <p class="text-sm font-bold text-slate-500 mb-3">📝 오늘의 핵심 요약</p>
-                    <ul class="space-y-2 text-sm text-slate-700">
-                        <li>✅ 많은 새들은 무거운 눈 근육이 없다.</li>
-                        <li>✅ 새가 날기 위해서는 무조건 가벼워야 한다.</li>
-                        <li>✅ <span class="font-bold text-indigo-600">Birds must be light to fly.</span></li>
-                    </ul>
+                <div class="w-full bg-indigo-50 p-5 rounded-2xl border border-indigo-100 text-left mt-2">
+                    <p class="text-sm font-bold text-indigo-800 mb-3"><i class="fa-solid fa-chart-line mr-2"></i>오늘의 학습 성과</p>
+                    <div class="space-y-3 text-sm text-slate-700 font-medium">
+                        <div class="flex justify-between border-b border-indigo-100 pb-2"><span>학습 시간</span><span class="text-indigo-600 font-bold">21분 45초</span></div>
+                        <div class="flex justify-between border-b border-indigo-100 pb-2"><span>새로 익힌 어휘</span><span class="text-indigo-600 font-bold">8개</span></div>
+                        <div class="flex justify-between border-b border-indigo-100 pb-2"><span>문장 발화 점수 평균</span><span class="text-indigo-600 font-bold">91.5점</span></div>
+                    </div>
                 </div>
 
-                <button class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold mt-4 shadow-md hover:bg-slate-800 active:scale-95">
-                    홈으로 돌아가기
+                <button class="w-full bg-slate-900 text-white py-4 rounded-xl font-bold mt-4 shadow-md hover:bg-slate-800">
+                    대시보드로 돌아가기
                 </button>
             </div>
 
@@ -200,11 +323,11 @@
 
         <div id="feedback-modal" class="hidden absolute bottom-0 left-0 w-full bg-white rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.2)] z-50 p-6 transform transition-transform translate-y-full">
             <div class="flex items-start space-x-4">
-                <div id="modal-icon" class="text-3xl mt-1"></div>
+                <div id="modal-icon" class="text-3xl mt-1">🤔</div>
                 <div class="flex-1">
-                    <h4 id="modal-title" class="font-bold text-lg mb-2"></h4>
-                    <p id="modal-desc" class="text-slate-600 text-sm leading-relaxed mb-6"></p>
-                    <button onclick="closeModal()" id="modal-btn" class="w-full py-3 rounded-xl font-bold text-white transition active:scale-95"></button>
+                    <h4 class="font-bold text-lg mb-2 text-orange-600">다시 한 번 생각해볼까?</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">본문에서 눈이 작다는 이야기는 없었어. 새가 하늘을 날려면 몸이 무거워야 할까, 가벼워야 할까? <b>'light'</b>와 <b>'heavy'</b>의 관계를 떠올려봐!</p>
+                    <button onclick="closeModal()" class="w-full py-3 rounded-xl font-bold text-white bg-orange-500 hover:bg-orange-600">다시 풀기</button>
                 </div>
             </div>
         </div>
@@ -213,23 +336,20 @@
     </div>
 
     <script>
-        // 화면 전환 로직
+        // 화면 전환 및 프로그레스 바 로직 (총 12단계)
         function nextStep(stepNum) {
             document.querySelectorAll('.step-container').forEach(el => el.classList.add('hidden'));
             const targetStep = document.getElementById('step-' + stepNum);
             targetStep.classList.remove('hidden');
             targetStep.classList.add('fade-in');
             
-            // 프로그레스 바 업데이트 (총 8단계)
-            const progress = (stepNum / 8) * 100;
+            const progress = (stepNum / 12) * 100;
             document.getElementById('progress-bar').style.width = progress + '%';
-            document.getElementById('step-indicator').innerText = `Step ${stepNum} / 8`;
-
-            // 스크롤 맨 위로
+            document.getElementById('step-indicator').innerText = `Step ${stepNum} / 12`;
             document.getElementById('main-content').scrollTop = 0;
         }
 
-        // 스캐폴딩 툴팁 토글 (Step 5)
+        // 스캐폴딩 툴팁 토글
         function toggleTooltip(id) {
             document.querySelectorAll('[id^="tip-"]').forEach(tip => {
                 if(tip.id !== id) tip.classList.add('hidden');
@@ -237,39 +357,18 @@
             document.getElementById(id).classList.toggle('hidden');
         }
 
-        // 딥 피드백 모달 (Step 4)
-        function checkAnswer(selected) {
-            const modal = document.getElementById('feedback-modal');
-            const overlay = document.getElementById('modal-overlay');
-            const title = document.getElementById('modal-title');
-            const desc = document.getElementById('modal-desc');
-            const icon = document.getElementById('modal-icon');
-            const btn = document.getElementById('modal-btn');
-
-            if (selected === 1 || selected === 3) {
-                icon.innerHTML = '🤔';
-                title.innerText = '다시 한 번 생각해볼까?';
-                title.className = "font-bold text-lg mb-2 text-orange-600";
-                desc.innerHTML = "본문의 <b>'light(가벼운)'</b>와 <b>'heavy(무거운)'</b>의 관계를 다시 떠올려보면 답이 보일 거야!";
-                btn.innerText = "다시 풀기";
-                btn.className = "w-full py-3 rounded-xl font-bold text-white bg-orange-500";
-                btn.onclick = closeModal;
-            } else if (selected === 2) {
-                icon.innerHTML = '🎉';
-                title.innerText = '완벽한 정답이야!';
-                title.className = "font-bold text-lg mb-2 text-indigo-600";
-                desc.innerHTML = "맞아! 근육은 무겁기(heavy) 때문에 가벼워야(light) 하는 새들에게는 치명적이지.";
-                btn.innerText = "다음 단계로";
-                btn.className = "w-full py-3 rounded-xl font-bold text-white bg-indigo-600";
-                btn.onclick = () => { closeModal(); nextStep(5); };
+        // 오답 딥 피드백 모달
+        function checkFeedbackModal(isCorrect) {
+            if(!isCorrect) {
+                const modal = document.getElementById('feedback-modal');
+                const overlay = document.getElementById('modal-overlay');
+                overlay.classList.remove('hidden');
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    modal.classList.remove('translate-y-full');
+                }, 10);
             }
-
-            overlay.classList.remove('hidden');
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                overlay.classList.remove('opacity-0');
-                modal.classList.remove('translate-y-full');
-            }, 10);
         }
 
         function closeModal() {
@@ -281,31 +380,34 @@
             }, 300);
         }
 
-        // 딕테이션 검증 로직 (Step 6)
-        function checkDictation() {
-            const val = document.getElementById('dict-input').value.toLowerCase().trim();
-            const btn = document.getElementById('btn-step6');
-            if(val === 'light') {
-                btn.disabled = false;
-                btn.className = "w-full bg-slate-900 text-white py-4 rounded-xl font-bold transition duration-300 transform scale-100";
-                btn.innerHTML = "정답! 다음으로 <i class='fa-solid fa-arrow-right ml-2'></i>";
-            } else {
-                btn.disabled = true;
-                btn.className = "w-full bg-slate-300 text-slate-500 py-4 rounded-xl font-bold transition duration-300";
-                btn.innerText = "정확히 입력해주세요";
+        // 딕테이션 자동 검증 (Story 1)
+        function checkAllDictations() {
+            const v1 = document.getElementById('dict1').value.toLowerCase().trim();
+            const v2 = document.getElementById('dict2').value.toLowerCase().trim();
+            const btn = document.getElementById('btn-dict');
+            if(v1 === 'light' && v2 === 'dark') {
+                btn.classList.remove('bg-slate-300', 'text-slate-500', 'pointer-events-none');
+                btn.classList.add('bg-slate-900', 'text-white');
+                btn.innerHTML = "정답 확인 완료 <i class='fa-solid fa-arrow-right ml-2'></i>";
             }
         }
 
-        // 마이크 녹음 시뮬레이션 (Step 7)
-        function simulateRecording() {
-            const btn = document.getElementById('record-btn');
-            const text = document.getElementById('record-text');
-            
+        // 딕테이션 자동 검증 (Story 2)
+        function checkDict3() {
+            const v3 = document.getElementById('dict3').value.toLowerCase().trim();
+            const btn = document.getElementById('btn-dict2');
+            if(v3 === 'energy') {
+                btn.classList.remove('bg-slate-300', 'text-slate-500', 'pointer-events-none');
+                btn.classList.add('bg-slate-900', 'text-white');
+                btn.innerHTML = "정답 확인 완료 <i class='fa-solid fa-arrow-right ml-2'></i>";
+            }
+        }
+
+        // 마이크 녹음 시뮬레이션
+        function simulateRecording(btnId, scoreId, nextBtnId) {
+            const btn = document.getElementById(btnId);
             btn.classList.add('recording-pulse');
             btn.classList.replace('bg-red-500', 'bg-red-600');
-            text.innerText = "녹음 중입니다... (3초 후 완료)";
-            text.classList.replace('text-slate-500', 'text-red-500');
-            text.classList.add('font-bold', 'animate-pulse');
 
             setTimeout(() => {
                 btn.classList.remove('recording-pulse');
@@ -313,18 +415,13 @@
                 btn.innerHTML = '<i class="fa-solid fa-check text-slate-500"></i>';
                 btn.onclick = null;
                 
-                text.innerText = "AI 발음 분석 완료!";
-                text.classList.replace('text-red-500', 'text-indigo-600');
-                text.classList.remove('animate-pulse');
-
-                document.getElementById('score-display').classList.remove('hidden');
-                document.getElementById('score-display').classList.add('fade-in');
+                document.getElementById(scoreId).classList.remove('hidden');
                 
-                const nextBtn = document.getElementById('btn-step7');
+                const nextBtn = document.getElementById(nextBtnId);
                 nextBtn.classList.remove('hidden');
                 nextBtn.classList.add('bg-slate-900', 'text-white');
                 nextBtn.classList.remove('bg-slate-300', 'text-slate-500');
-            }, 3000);
+            }, 2500);
         }
     </script>
 </body>
